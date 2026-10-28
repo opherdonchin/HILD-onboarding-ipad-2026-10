@@ -7,14 +7,15 @@
 
 ## Current state
 
-- HILD (upstream [bb299d2](https://github.com/Motor-Learning-Lab/HILD/tree/bb299d242e6de85861609f7b834919c5ed81f0d7)) is installed for Claude Code on branch `process/install-hild`; the mechanical `--verify` passed.
-- [Draft PR #2](https://github.com/opherdonchin/HILD-onboarding-ipad-2026-10/pull/2) awaits the researcher's review; it is not merged and `main` does not yet contain HILD.
-- Untested: live skill discovery and the session-start hook, onboarding validation, recovery from plan and journal in a fresh session, GitHub squash settings.
+- HILD (upstream [bb299d2](https://github.com/Motor-Learning-Lab/HILD/tree/bb299d242e6de85861609f7b834919c5ed81f0d7)) is installed for Claude Code and merged to `main` ([PR #2](https://github.com/opherdonchin/HILD-onboarding-ipad-2026-10/pull/2), [937a036](https://github.com/opherdonchin/HILD-onboarding-ipad-2026-10/commit/937a036d2cca34018c2a16cef79dcb0b4d39a86b)); `--verify` passes.
+- `.claude/skills` is a symlink; clones with `core.symlinks=false` get a plain file and lose skill discovery. Fixed locally; see the journal.
+- Untested: skill discovery in a fresh session, onboarding validation, recovery from plan and journal.
+- GitHub: squash merge allowed but not enforced (merge and rebase also allowed); `main` is unprotected.
 - The wiki exists with only the default `Home` page.
 
 ## Next steps
 
-1. Researcher reviews PR #2 and accepts and squash-merges it, or asks for changes.
-2. After merge: draft a `Process-HILD` wiki page (researcher alone marks it `understood`).
-3. Try a fresh Claude Code session to see whether it recovers this state from the plan and journal; record the result.
-4. Check GitHub squash-merge settings and branch protection.
+1. Draft a `Process-HILD` wiki page (researcher alone marks it `understood`).
+2. Try a fresh Claude Code session to see whether it recovers this state from the plan and journal; record the result.
+3. Researcher decides whether to restrict merge methods and protect `main`.
+4. Report the symlink finding upstream, if the researcher agrees.
